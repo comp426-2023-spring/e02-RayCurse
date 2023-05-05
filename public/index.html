@@ -2,11 +2,32 @@
     <head>
         <title>Rock</title>
         <!-- Link to your script file(s) and CSS in here somewhere -->
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
 
-    <!-- Your interface markup goes here -->
-    <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
+        <!-- Your interface markup goes here -->
+        <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
+        
+        <h1>RPS/RPSLS</h1>
+
+        <form>
+            <fieldset>
+                <legend>Game Type</legend>
+                <input type="radio" id="rps" name="selected_game" value="rps"> 
+                <label for="rps">Rock Paper Scissors </label> <br>
+                <input type="radio" id="rpsls" name="selected_game" value="rpsls">
+                <label for="rpsls">Rock Paper Scissors Lizard Spock </label>
+            </fieldset> <br>
+
+            <fieldset>
+                <legend>Game Mode</legend>
+                <input type="radio" id="draw" name="game_mode" value="draw"> 
+                <label for="rps">Random draw</label> <br>
+                <input type="radio" id="opponent" name="game_mode" value="opponent">
+                <label for="rpsls">Play an opponent</label>
+            </fieldset>
+        </form>
 
     </body>
 </html>

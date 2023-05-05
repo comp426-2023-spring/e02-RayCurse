@@ -2,7 +2,13 @@ body {
 }
 
 h1 {
+    text-align: center;
 }
 
 p {
+}
+
+form {
+    margin: 0 auto;
+    width:30%;
 }
