@@ -42,13 +42,30 @@ window.addEventListener("DOMContentLoaded", function() {
             }
         })
     }
-    form.addEventListener("reset", function(){
-        playOptionsMenu.style.visibility = "hidden"
+    form.addEventListener("reset", function(e){
+        e.preventDefault()
+        for (button of document.querySelectorAll("input:checked")) {
+            button.checked = false
+        }
         results.style.visibility = "hidden"
-        for (label of document.querySelectorAll("label[for='play_options_menu']")) {
-            label.style.visibility = "hidden"
+        for (button of document.querySelectorAll("input[type='radio'][name='selected_game'], input[type='radio'][name='game_mode']")) {
+            button.dispatchEvent(new Event("change"))
         }
     })
+
+    // Enable/disable submit button
+    for (const button of document.querySelectorAll("[name='selected_game'], [name='game_mode']")) {
+        button.addEventListener("change", function() {
+            disabled = true
+            if (
+                document.querySelectorAll("input[type='radio'][name='selected_game']:checked").length > 0
+                && document.querySelectorAll("input[type='radio'][name='game_mode']:checked").length > 0
+            ) {
+                disabled = false
+            }
+            document.querySelector("input[type='submit']").disabled = disabled
+        })
+    }
 
     // Submit form
     form.addEventListener("submit", function(e){
