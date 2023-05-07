@@ -1,14 +1,50 @@
+:root {
+    --accent: #0066ff;
+    --light_accent: #6699ff;
+}
+
 body {
+    font-family: "Arial";
 }
 
 h1 {
     text-align: center;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+a {
+    font-weight: bold;
+}
+
+a:link {
+    color: var(--accent);
+}
+
+a:visited {
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--light_accent);
 }
 
 p {
+    font-weight: bold;
 }
 
 form {
     margin: 0 auto;
     width:30%;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+fieldset {
+    border-width: 4px;
+    border-style: solid;
+    border-color: var(--light_accent);
 }
