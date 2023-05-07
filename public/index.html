@@ -1,17 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Rock</title>
         <!-- Link to your script file(s) and CSS in here somewhere -->
         <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="scripts.js"></script>
     </head>
     <body>
 
         <!-- Your interface markup goes here -->
         <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
-        
+
         <h1>RPS/RPSLS</h1>
 
-        <form>
+        <form id="form">
             <fieldset>
                 <legend>Game Type</legend>
                 <input type="radio" id="rps" name="selected_game" value="rps"> 
@@ -23,10 +25,18 @@
             <fieldset>
                 <legend>Game Mode</legend>
                 <input type="radio" id="draw" name="game_mode" value="draw"> 
-                <label for="rps">Random draw</label> <br>
+                <label for="draw">Random draw</label> <br>
                 <input type="radio" id="opponent" name="game_mode" value="opponent">
-                <label for="rpsls">Play an opponent</label>
-            </fieldset>
+                <label for="opponent">Play an opponent</label>
+            </fieldset> <br>
+
+            <label for="play_options_menu" style="visibility:hidden">Choose your play:</label>
+            <select id="play_options_menu" name="play" style="visibility:hidden">
+            </select> <br> <br>
+
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit" style="float: right;">
         </form>
 
     </body>
