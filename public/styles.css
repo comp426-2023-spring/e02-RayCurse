@@ -48,3 +48,19 @@ fieldset {
     border-style: solid;
     border-color: var(--light_accent);
 }
+
+#play_options_menu {
+    visibility: hidden;
+}
+
+label[for="play_options_menu"] {
+    visibility: hidden;
+}
+
+#results {
+    visibility: hidden;
+}
+
+button[type="submit"] {
+    float: right;
+}

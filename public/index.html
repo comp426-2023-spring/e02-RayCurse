@@ -19,7 +19,7 @@
             <a href="https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock" target="_blank">RPSLS Help</a><br><br>
             <fieldset>
                 <legend>Game Type</legend>
-                <input type="radio" id="rps" name="selected_game" value="rps"> 
+                <input type="radio" id="rps" name="selected_game" value="rps">
                 <label for="rps">Rock Paper Scissors </label> <br>
                 <input type="radio" id="rpsls" name="selected_game" value="rpsls">
                 <label for="rpsls">Rock Paper Scissors Lizard Spock </label>
@@ -27,21 +27,21 @@
 
             <fieldset>
                 <legend>Game Mode</legend>
-                <input type="radio" id="draw" name="game_mode" value="draw"> 
+                <input type="radio" id="draw" name="game_mode" value="draw">
                 <label for="draw">Random draw</label> <br>
                 <input type="radio" id="opponent" name="game_mode" value="opponent">
                 <label for="opponent">Play an opponent</label>
             </fieldset> <br>
 
-            <label for="play_options_menu" style="visibility:hidden">Choose your play:</label>
-            <select id="play_options_menu" name="play" style="visibility:hidden">
+            <label for="play_options_menu">Choose your play:</label>
+            <select id="play_options_menu" name="play">
             </select> <br> <br>
 
 
-            <input type="reset" value="Reset">
-            <input type="submit" value="Submit" disabled style="float:right;">
+            <button type="reset">Reset</button>
+            <button type="submit" disabled>Submit</button>
 
-            <p id="results" style="visibility:hidden">Results: </p>
+            <p id="results">Results:</p>
         </form>
 
     </body>
