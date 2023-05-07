@@ -63,11 +63,16 @@ window.addEventListener("DOMContentLoaded", function() {
             ) {
                 disabled = false
             }
-            document.querySelector("input[type='submit']").disabled = disabled
+            document.querySelector("button[type='submit']").disabled = disabled
         })
     }
 
     // Submit form
+    resultDisplayText = {
+        "win": "won",
+        "lose": "lost",
+        "tie": "tied",
+    }
     form.addEventListener("submit", function(e){
         e.preventDefault()
         const formData = new FormData(form)
@@ -89,7 +94,7 @@ window.addEventListener("DOMContentLoaded", function() {
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    results.innerHTML = `Opponent played ${data.opponent}. You ${data.result == "win" ? "won" : "lost"}!`
+                    results.innerHTML = `Opponent played ${data.opponent}. You ${resultDisplayText[data.result]}!`
                     results.style.visibility = "visible"
                 }
             )
